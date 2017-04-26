@@ -1,0 +1,15 @@
+<html>
+  <title>{{chat.topic}}</title>
+  <body>
+    <div class="greet">
+    <p>Welcome to the Chat Room for {{chat.topic}}, {{chat.user}}!</p>
+  </div>
+  <pre id="conversation">{{conversation}}</pre>
+  <form action="chat" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+    <p><input type="text" name="msg">Say</input></p>
+    <input type="hidden" name="topic" value={{chat.topic}}>
+    <input type="hidden" name="user" value="{{chat.user}}">
+    <input type="submit" value="Send">
+  </form>
+  </body>
+</html>
